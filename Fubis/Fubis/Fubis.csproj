@@ -47,25 +47,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\UserController.cs" />
-    <Compile Include="dto\Bicycle.cs" />
-    <Compile Include="model\Connection.cs" />
-    <Compile Include="model\impl\BicycleRepository.cs" />
-    <Compile Include="dto\Card.cs" />
-    <Compile Include="model\impl\CardRepository.cs" />
+    <Compile Include="model\Bicycle.cs" />
+    <Compile Include="dal\Connection.cs" />
+    <Compile Include="dal\impl\BicycleRepository.cs" />
+    <Compile Include="model\Card.cs" />
+    <Compile Include="dal\impl\CardRepository.cs" />
+    <Compile Include="service\UserService.cs" />
     <Compile Include="view\DeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\DeliveryForm.Designer.cs">
       <DependentUpon>DeliveryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="dto\District.cs" />
+    <Compile Include="model\District.cs" />
     <Compile Include="view\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\IRepository.cs" />
+    <Compile Include="dal\IRepository.cs" />
     <Compile Include="view\PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,8 +87,8 @@
     <Compile Include="view\RentBicycleForm.Designer.cs">
       <DependentUpon>RentBicycleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="dto\User.cs" />
-    <Compile Include="model\impl\UserRepository.cs" />
+    <Compile Include="model\User.cs" />
+    <Compile Include="dal\impl\UserRepository.cs" />
     <EmbeddedResource Include="view\DeliveryForm.resx">
       <DependentUpon>DeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,5 +126,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

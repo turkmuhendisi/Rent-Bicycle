@@ -64,11 +64,12 @@
             this.registerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.registerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Location = new System.Drawing.Point(301, 447);
+            this.registerButton.Location = new System.Drawing.Point(301, 448);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(422, 52);
+            this.registerButton.Size = new System.Drawing.Size(422, 51);
             this.registerButton.TabIndex = 8;
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // RegisterForm
             // 
@@ -80,6 +81,7 @@
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.emailField);
             this.Controls.Add(this.nationalIdField);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";

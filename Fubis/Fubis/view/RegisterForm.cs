@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Fubis.controller;
 using System.Windows.Forms;
 
 namespace Fubis
@@ -15,6 +9,13 @@ namespace Fubis
         public RegisterForm()
         {
             InitializeComponent();
+        }
+
+        private void registerButton_Click(object sender, System.EventArgs e)
+        {
+            UserController userController = new UserController();
+            userController.SetNationalId(nationalIdField.Text);
+            userController.SetEmail(emailField.Text);
         }
     }
 }
