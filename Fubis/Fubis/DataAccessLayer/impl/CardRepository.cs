@@ -4,16 +4,18 @@ using System.Data.SqlClient;
 
 namespace Fubis
 {
-    public class BicycleRepository : IRepository
+    public class CardRepository : IRepository
     {
-        private Bicycle bicycle;
+        private Card card;
+        private User user;
 
-        public BicycleRepository(Bicycle bicycle)
+        public CardRepository(Card card, User user)
         {
-            this.bicycle = bicycle;
+            this.card = card;
+            this.user = user;
         }
 
-        public void addItem()
+        public void AddItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -21,15 +23,17 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO bicycles (isAvailable) VALUES (@isAvailable)";
-                    command.Parameters.AddWithValue("@isAvailable", bicycle.IsAvailable);
+                    command.CommandText = "INSERT INTO cards (cardNumber, balance, userId) VALUES (@cardNumber, @balance, @userId)";
+                    command.Parameters.AddWithValue("@cardNumber", card.CardNumber);
+                    command.Parameters.AddWithValue("@balance", card.Balance);
+                    command.Parameters.AddWithValue("@userId", user.UserId);
 
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        public void deleteItem()
+        public void DeleteItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -37,15 +41,15 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "DELETE FROM bicycles WHERE bicycleId = @bicycleId";
-                    command.Parameters.AddWithValue("@bicycleId", bicycle.BicycleId);
+                    command.CommandText = "DELETE FROM cards WHERE cardId = @cardId";
+                    command.Parameters.AddWithValue("@cardId", card.CardId);
 
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        public void getItem()
+        public void GetItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -53,15 +57,15 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM bicycles WHERE bicycleId = @bicycleId";
-                    command.Parameters.AddWithValue("@bicycleId", bicycle.BicycleId);
+                    command.CommandText = "SELECT * FROM cards WHERE cardId = @cardId";
+                    command.Parameters.AddWithValue("@cardId", card.CardId);
 
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        public void updateItem()
+        public void UpdateItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -69,9 +73,10 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "UPDATE bicycles SET isAvailable = @isAvailable WHERE bicycleId = @bicycleId";
-                    command.Parameters.AddWithValue("@isAvailable", bicycle.IsAvailable);
-                    command.Parameters.AddWithValue("@bicycleId", bicycle.BicycleId);
+                    command.CommandText = "UPDATE cards SET cardNumber = @cardNumber, balance = @balance WHERE cardId = @cardId";
+                    command.Parameters.AddWithValue("@cardNumber", card.CardNumber);
+                    command.Parameters.AddWithValue("@balance", card.Balance);
+                    command.Parameters.AddWithValue("@cardId", card.CardId);
 
                     command.ExecuteNonQuery();
                 }

@@ -13,7 +13,7 @@ namespace Fubis
             this.user = user;
         }
 
-        public void addItem()
+        public void AddItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -22,11 +22,9 @@ namespace Fubis
                 {
                     command.Connection = connection;
                     command.CommandText =
-                        "INSERT INTO users (firstName, lastName, nationalId, email) " +
-                        "VALUES(@firstName, @lastName, @nationalId, @email)";
+                        "INSERT INTO users (nationalId, email) " +
+                        "VALUES(@nationalId, @email)";
 
-                    command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@lastName", user.LastName);
                     command.Parameters.AddWithValue("@nationalId", user.NationalId);
                     command.Parameters.AddWithValue("@email", user.Email);
 
@@ -35,7 +33,7 @@ namespace Fubis
             }
         }
 
-        public void deleteItem()
+        public void DeleteItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -51,7 +49,7 @@ namespace Fubis
             }
         }
 
-        public void getItem()
+        public void GetItem()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -59,7 +57,30 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM users WHERE userId = @userId";
+                    command.CommandText = "SELECT * FROM users WHERE nationalId = @nationalId";
+                    command.Parameters.AddWithValue("@nationalId", user.NationalId);
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+
+                    }
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateItem()
+        {
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE users SET email = @email WHERE userId = @userId";
+                    command.Parameters.AddWithValue("@email", user.Email);
                     command.Parameters.AddWithValue("@userId", user.UserId);
 
                     command.ExecuteNonQuery();
@@ -67,7 +88,7 @@ namespace Fubis
             }
         }
 
-        public void updateItem()
+        public int UserGetId()
         {
             using (SqlConnection connection = Connection.GetConnection())
             {
@@ -75,13 +96,12 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "UPDATE users SET firstName = @firstName, lastName = @lastName, email = @email WHERE userId = @userId";
-                    command.Parameters.AddWithValue("@firstName", user.FirstName);
-                    command.Parameters.AddWithValue("@lastName", user.LastName);
-                    command.Parameters.AddWithValue("@email", user.Email);
-                    command.Parameters.AddWithValue("@userId", user.UserId);
+                    command.CommandText = "SELECT userId FROM users WHERE nationalId = @nationalId";
+                    command.Parameters.AddWithValue("@nationalId", user.NationalId);
 
-                    command.ExecuteNonQuery();
+                    int userId = (int)command.ExecuteScalar();
+
+                    return userId;
                 }
             }
         }

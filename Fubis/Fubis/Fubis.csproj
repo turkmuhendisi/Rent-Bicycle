@@ -46,56 +46,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controller\UserController.cs" />
-    <Compile Include="model\Bicycle.cs" />
-    <Compile Include="dal\Connection.cs" />
-    <Compile Include="dal\impl\BicycleRepository.cs" />
-    <Compile Include="model\Card.cs" />
-    <Compile Include="dal\impl\CardRepository.cs" />
-    <Compile Include="service\UserService.cs" />
-    <Compile Include="view\DeliveryForm.cs">
+    <Compile Include="Model\Bicycle.cs" />
+    <Compile Include="DataAccessLayer\Connection.cs" />
+    <Compile Include="DataAccessLayer\impl\BicycleRepository.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="DataAccessLayer\impl\CardRepository.cs" />
+    <Compile Include="Service\CardNumberGenerator.cs" />
+    <Compile Include="View\Delivery\DeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\DeliveryForm.Designer.cs">
+    <Compile Include="View\Delivery\DeliveryForm.Designer.cs">
       <DependentUpon>DeliveryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\District.cs" />
-    <Compile Include="view\HomeForm.cs">
+    <Compile Include="Model\District.cs" />
+    <Compile Include="View\Delivery\DeliveryFormController.cs" />
+    <Compile Include="View\Delivery\IDeliveryForm.cs" />
+    <Compile Include="View\Home\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\HomeForm.Designer.cs">
+    <Compile Include="View\Home\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="dal\IRepository.cs" />
-    <Compile Include="view\PaymentForm.cs">
+    <Compile Include="DataAccessLayer\IRepository.cs" />
+    <Compile Include="View\Payment\PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\PaymentForm.Designer.cs">
+    <Compile Include="View\Payment\PaymentForm.Designer.cs">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\RegisterForm.cs">
+    <Compile Include="View\Register\IRegisterForm.cs" />
+    <Compile Include="Service\UserValid.cs" />
+    <Compile Include="View\Register\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\RegisterForm.Designer.cs">
+    <Compile Include="View\Register\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\RentBicycleForm.cs">
+    <Compile Include="View\Register\RegisterFormController.cs" />
+    <Compile Include="View\Rent\RentBicycleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\RentBicycleForm.Designer.cs">
+    <Compile Include="View\Rent\RentBicycleForm.Designer.cs">
       <DependentUpon>RentBicycleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\User.cs" />
-    <Compile Include="dal\impl\UserRepository.cs" />
-    <EmbeddedResource Include="view\DeliveryForm.resx">
+    <Compile Include="Model\User.cs" />
+    <Compile Include="DataAccessLayer\impl\UserRepository.cs" />
+    <EmbeddedResource Include="View\Delivery\DeliveryForm.resx">
       <DependentUpon>DeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\HomeForm.resx">
+    <EmbeddedResource Include="View\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\PaymentForm.resx">
+    <EmbeddedResource Include="View\Payment\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -107,10 +111,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\RegisterForm.resx">
+    <EmbeddedResource Include="View\Register\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\RentBicycleForm.resx">
+    <EmbeddedResource Include="View\Rent\RentBicycleForm.resx">
       <DependentUpon>RentBicycleForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
