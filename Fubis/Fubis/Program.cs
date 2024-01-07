@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Fubis.Service;
+using Fubis.View.Admin;
+using Fubis.View.Staffs.UserControls.BicycleMaintenance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +17,11 @@ namespace Fubis
         [STAThread]
         static void Main()
         {
+            //CardNumberGenerator generator = new CardNumberGenerator();
+            //Console.WriteLine(generator.GeneratedCardNumber());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(RegisterForm.GetInstance());
+            Application.Run(new RegisterForm());
         }
     }
 }

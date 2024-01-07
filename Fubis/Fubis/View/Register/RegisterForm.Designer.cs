@@ -38,21 +38,21 @@
             // 
             this.nationalIdField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nationalIdField.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nationalIdField.Location = new System.Drawing.Point(282, 220);
+            this.nationalIdField.Location = new System.Drawing.Point(301, 283);
             this.nationalIdField.MaxLength = 11;
             this.nationalIdField.Name = "nationalIdField";
-            this.nationalIdField.Size = new System.Drawing.Size(460, 22);
+            this.nationalIdField.Size = new System.Drawing.Size(422, 22);
             this.nationalIdField.TabIndex = 6;
             // 
             // emailField
             // 
             this.emailField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailField.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.emailField.Location = new System.Drawing.Point(282, 323);
+            this.emailField.Location = new System.Drawing.Point(301, 403);
             this.emailField.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.emailField.MaxLength = 150;
             this.emailField.Name = "emailField";
-            this.emailField.Size = new System.Drawing.Size(460, 22);
+            this.emailField.Size = new System.Drawing.Size(422, 22);
             this.emailField.TabIndex = 7;
             // 
             // registerButton
@@ -64,9 +64,9 @@
             this.registerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.registerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Location = new System.Drawing.Point(301, 448);
+            this.registerButton.Location = new System.Drawing.Point(408, 487);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(422, 51);
+            this.registerButton.Size = new System.Drawing.Size(209, 38);
             this.registerButton.TabIndex = 8;
             this.registerButton.UseVisualStyleBackColor = false;
             // 

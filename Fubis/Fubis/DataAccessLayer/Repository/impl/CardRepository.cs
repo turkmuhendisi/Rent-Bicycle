@@ -1,5 +1,6 @@
 ﻿
 using Fubis.model;
+using System;
 using System.Data.SqlClient;
 
 namespace Fubis
@@ -81,6 +82,29 @@ namespace Fubis
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public bool CardBalanceControl(double price)
+        {
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT balance FROM cards WHERE userdId = @userId";
+                    command.Parameters.AddWithValue("@userId", user.UserId);
+
+                    object balanceResult = command.ExecuteScalar();
+
+                    if (balanceResult != null && double.TryParse(balanceResult.ToString(), out double balance))
+                    {
+                        if (balance >= price) return true;
+                    }
+                }
+            }
+
+            return false;
         }
     }
 }

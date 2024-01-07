@@ -43,9 +43,9 @@
             this.rentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.rentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.rentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rentButton.Location = new System.Drawing.Point(302, 403);
+            this.rentButton.Location = new System.Drawing.Point(710, 158);
             this.rentButton.Name = "rentButton";
-            this.rentButton.Size = new System.Drawing.Size(420, 53);
+            this.rentButton.Size = new System.Drawing.Size(154, 34);
             this.rentButton.TabIndex = 0;
             this.rentButton.UseVisualStyleBackColor = false;
             // 
@@ -58,9 +58,9 @@
             this.deliverButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.deliverButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.deliverButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deliverButton.Location = new System.Drawing.Point(302, 473);
+            this.deliverButton.Location = new System.Drawing.Point(312, 158);
             this.deliverButton.Name = "deliverButton";
-            this.deliverButton.Size = new System.Drawing.Size(420, 54);
+            this.deliverButton.Size = new System.Drawing.Size(154, 34);
             this.deliverButton.TabIndex = 1;
             this.deliverButton.UseVisualStyleBackColor = false;
             // 
@@ -73,13 +73,13 @@
             this.registerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.registerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Location = new System.Drawing.Point(901, 21);
+            this.registerButton.Location = new System.Drawing.Point(312, 408);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(30, 28);
+            this.registerButton.Size = new System.Drawing.Size(154, 34);
             this.registerButton.TabIndex = 2;
             this.registerButton.UseVisualStyleBackColor = false;
             // 
-            // HomePage
+            // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +91,7 @@
             this.Controls.Add(this.rentButton);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "HomePage";
+            this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fubis.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +14,16 @@ namespace Fubis.View.Register
         private IRegisterForm _view = RegisterForm.GetInstance();
         private User user = new User();
         private Card card = new Card();
+        private CardNumberGenerator cardNumberGenerator = new CardNumberGenerator();
+
 
         public RegisterFormController()
         {
             _view.RegisterButtonClicked += OnRegisterButtonClicked;
-            _view.NationalIdFieldKeyPress += NationalIdFieldKeyPress;
+            _view.NationalIdFieldKeyPress += OnNationalIdFieldKeyPress;
         }
 
-        private void NationalIdFieldKeyPress(object sender, KeyPressEventArgs e)
+        private void OnNationalIdFieldKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
@@ -29,7 +32,7 @@ namespace Fubis.View.Register
         }
         private void OnRegisterButtonClicked(object sender, EventArgs e)
         {
-            if (!UserValid.IsAvailableUser(_view.GetNationalId, _view.GetEmail))
+            if (!UserRepository.IsAvailableUser(_view.GetNationalId, _view.GetEmail))
             {
                 user.NationalId = _view.GetNationalId;
                 user.Email = _view.GetEmail;
@@ -43,11 +46,13 @@ namespace Fubis.View.Register
                 RegisterForm.GetInstance().Hide();
 
                 user.UserId = userRepository.UserGetId();
-
+                card.CardNumber = cardNumberGenerator.GeneratedCardNumberForUser();
+                card.Balance = 0;
 
                 CardRepository cardRepository = new CardRepository(card,user);
+                cardRepository.AddItem();
 
-                MessageBox.Show("Successfully");
+                DialogResult dialog = MessageBox.Show("Kayıt başarılı", "Successfully", MessageBoxButtons.OK);
             }
             else
             {

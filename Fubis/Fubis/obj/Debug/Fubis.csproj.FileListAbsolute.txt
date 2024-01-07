@@ -12,10 +12,9 @@ C:\Users\turkmuhendisi\source\repos\Fubis\Fubis\obj\Debug\Fubis.PaymentForm.reso
 C:\Users\turkmuhendisi\source\repos\Fubis\Fubis\obj\Debug\Fubis.RentBicycleForm.resources
 C:\Users\turkmuhendisi\source\repos\Fubis\Fubis\obj\Debug\Fubis.DeliveryForm.resources
 C:\Users\turkmuhendisi\source\repos\Fubis\Fubis\obj\Debug\Fubis.RegisterForm.resources
-C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\bin\Debug\Fubis.exe.config
-C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\bin\Debug\Fubis.exe
-C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\bin\Debug\Fubis.pdb
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.csprojAssemblyReference.cache
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Admin.UserControls.BicycleManagement.BicycleManagementControl.resources
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Admin.ModeratorManagement.ModeratorManagementControl.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.DeliveryForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.HomeForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.PaymentForm.resources
@@ -24,5 +23,11 @@ C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\D
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.RentBicycleForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.csproj.GenerateResource.cache
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.csproj.CoreCompileInputs.cache
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\bin\Debug\Fubis.exe.config
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\bin\Debug\Fubis.exe
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\bin\Debug\Fubis.pdb
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.exe
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.pdb
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Staffs.UserControls.BicycleMaintenance.BicycleMaintenanceControl.resources
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Staffs.UserControls.BicycleMaintenance.StaffForm.resources
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Admin.AdminForm.resources

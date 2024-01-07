@@ -11,6 +11,18 @@ namespace Fubis
         public string NationalId { get => nationalId; set => nationalId = value; }
         public string Email { get => email; set => email = value; }
 
+        private static User instance;
+
+        public static User GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new User();
+            }
+
+            return instance;
+        }
+
         public User()
         {
         }

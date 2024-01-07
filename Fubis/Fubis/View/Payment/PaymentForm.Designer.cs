@@ -42,19 +42,19 @@
             this.continueButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.continueButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.continueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.continueButton.Location = new System.Drawing.Point(301, 448);
+            this.continueButton.Location = new System.Drawing.Point(197, 305);
             this.continueButton.Name = "continueButton";
-            this.continueButton.Size = new System.Drawing.Size(422, 52);
+            this.continueButton.Size = new System.Drawing.Size(208, 38);
             this.continueButton.TabIndex = 2;
             this.continueButton.UseVisualStyleBackColor = false;
             // 
             // cardNumberField
             // 
             this.cardNumberField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cardNumberField.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.cardNumberField.Location = new System.Drawing.Point(280, 215);
+            this.cardNumberField.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cardNumberField.Location = new System.Drawing.Point(90, 117);
             this.cardNumberField.Name = "cardNumberField";
-            this.cardNumberField.Size = new System.Drawing.Size(460, 22);
+            this.cardNumberField.Size = new System.Drawing.Size(419, 18);
             this.cardNumberField.TabIndex = 3;
             // 
             // PaymentForm
@@ -63,7 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.cardNumberField);
             this.Controls.Add(this.continueButton);
             this.DoubleBuffered = true;
