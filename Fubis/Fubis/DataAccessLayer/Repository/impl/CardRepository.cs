@@ -10,10 +10,24 @@ namespace Fubis
         private Card card;
         private User user;
 
+        public CardRepository()
+        {
+        }
+
         public CardRepository(Card card, User user)
         {
             this.card = card;
             this.user = user;
+        }
+
+        private static CardRepository instance;
+        public static CardRepository GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new CardRepository();
+            }
+            return instance;
         }
 
         public void AddItem()
@@ -74,10 +88,9 @@ namespace Fubis
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "UPDATE cards SET cardNumber = @cardNumber, balance = @balance WHERE cardId = @cardId";
-                    command.Parameters.AddWithValue("@cardNumber", card.CardNumber);
+                    command.CommandText = "UPDATE cards SET balance = @balance WHERE cardNumber = @cardNumber";
                     command.Parameters.AddWithValue("@balance", card.Balance);
-                    command.Parameters.AddWithValue("@cardId", card.CardId);
+                    command.Parameters.AddWithValue("@cardNumber", card.CardNumber);
 
                     command.ExecuteNonQuery();
                 }
@@ -105,6 +118,50 @@ namespace Fubis
             }
 
             return false;
+        }
+
+        public static bool IsAvailableCard(string cardNumber)
+        {
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT COUNT(*) FROM cards c " +
+                        "INNER JOIN users u " +
+                        "ON c.userId = u.userId " +
+                        "WHERE cardNumber = @cardNumber";
+
+                    command.Parameters.AddWithValue("@cardNumber", cardNumber);
+
+                    int count = (int)command.ExecuteScalar();
+
+                    return count > 0;
+                }
+            }
+        }
+
+        public double GetCardBalance(string cardNumber)
+        {
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT balance FROM cards WHERE cardNumber = @cardNumber";
+                    command.Parameters.AddWithValue("@cardNumber", cardNumber);
+
+                    object balanceResult = command.ExecuteScalar();
+
+                    if (balanceResult != null && double.TryParse(balanceResult.ToString(), out double balance))
+                    {
+                        return balance;
+                    }
+                }
+            }
+            return 0;
         }
     }
 }

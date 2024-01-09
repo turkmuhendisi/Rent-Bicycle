@@ -124,5 +124,27 @@ namespace Fubis
                 }
             }
         }
+
+        public static string GetUserEmail(string cardNumber)
+        {
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT email FROM users u " +
+                        "INNER JOIN cards c " +
+                        "ON u.userId = c.userId " +
+                        "WHERE cardNumber = @cardNumber";
+
+                    command.Parameters.AddWithValue("@cardNumber", cardNumber);
+
+                    string email = command.ExecuteScalar().ToString();
+
+                    return email;
+                }
+            }
+        }
     }
 }

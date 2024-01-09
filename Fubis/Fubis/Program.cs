@@ -21,7 +21,7 @@ namespace Fubis
             //Console.WriteLine(generator.GeneratedCardNumber());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterForm());
+            Application.Run(new HomeForm());
         }
     }
 }

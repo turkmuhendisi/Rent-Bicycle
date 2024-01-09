@@ -32,31 +32,37 @@ namespace Fubis.View.Register
         }
         private void OnRegisterButtonClicked(object sender, EventArgs e)
         {
-            if (!UserRepository.IsAvailableUser(_view.GetNationalId, _view.GetEmail))
+            if (_view.GetNationalId.Length == 11 && _view.GetEmail.Length != 0)
             {
-                user.NationalId = _view.GetNationalId;
-                user.Email = _view.GetEmail;
+                if (!UserRepository.IsAvailableUser(_view.GetNationalId, _view.GetEmail))
+                {
+                    user.NationalId = _view.GetNationalId;
+                    user.Email = _view.GetEmail;
 
-                UserRepository userRepository = new UserRepository(user);
+                    UserRepository userRepository = new UserRepository(user);
 
-                userRepository.AddItem();
+                    userRepository.AddItem();
 
-                HomeForm homeForm = new HomeForm();
-                homeForm.Show();
-                RegisterForm.GetInstance().Hide();
+                    user.UserId = userRepository.UserGetId();
+                    card.CardNumber = cardNumberGenerator.GeneratedCardNumberForUser();
+                    card.Balance = 0;
 
-                user.UserId = userRepository.UserGetId();
-                card.CardNumber = cardNumberGenerator.GeneratedCardNumberForUser();
-                card.Balance = 0;
+                    CardRepository cardRepository = new CardRepository(card, user);
+                    cardRepository.AddItem();
 
-                CardRepository cardRepository = new CardRepository(card,user);
-                cardRepository.AddItem();
+                    UserMailService userMailService = new UserMailService();
+                    userMailService.MailSender(card.CardNumber, user.Email);
 
-                DialogResult dialog = MessageBox.Show("Kayıt başarılı", "Successfully", MessageBoxButtons.OK);
+                    HomeForm homeForm = new HomeForm();
+                    homeForm.Show();
+                    RegisterForm.GetInstance().Close();
+
+                    DialogResult dialog = MessageBox.Show("Kayıt başarılı", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                DialogResult dialog = MessageBox.Show("Invalid Input!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                DialogResult dialog = MessageBox.Show("Lütfen bilgilerinizi kontrol ediniz!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
         }
     }

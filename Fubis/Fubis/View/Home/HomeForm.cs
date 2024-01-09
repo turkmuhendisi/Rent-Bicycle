@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fubis.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace Fubis
         public HomeForm()
         {
             InitializeComponent();
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            RegisterForm.GetInstance().Show();
+            this.Hide();
+        }
+
+        private void addBalanceButton_Click(object sender, EventArgs e)
+        {
+            BalanceForm.GetInstance().Show();
+            this.Hide();
+        }
+
+        private void rentButton_Click(object sender, EventArgs e)
+        {
+            RentBicycleForm.GetInstance().Show();
+            this.Hide();
         }
     }
 }

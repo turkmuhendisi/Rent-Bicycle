@@ -1,6 +1,6 @@
-﻿namespace Fubis
+﻿namespace Fubis.View
 {
-    partial class PaymentForm
+    partial class BalanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BalanceForm));
+            this.balanceField = new System.Windows.Forms.TextBox();
             this.continueButton = new System.Windows.Forms.Button();
-            this.cardNumberField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // balanceField
+            // 
+            this.balanceField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(244)))));
+            this.balanceField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.balanceField.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.balanceField.Location = new System.Drawing.Point(328, 306);
+            this.balanceField.MaxLength = 11;
+            this.balanceField.Name = "balanceField";
+            this.balanceField.Size = new System.Drawing.Size(365, 22);
+            this.balanceField.TabIndex = 7;
             // 
             // continueButton
             // 
@@ -42,35 +53,24 @@
             this.continueButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.continueButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.continueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.continueButton.Location = new System.Drawing.Point(197, 305);
+            this.continueButton.Location = new System.Drawing.Point(405, 377);
             this.continueButton.Name = "continueButton";
-            this.continueButton.Size = new System.Drawing.Size(208, 38);
-            this.continueButton.TabIndex = 2;
+            this.continueButton.Size = new System.Drawing.Size(209, 38);
+            this.continueButton.TabIndex = 9;
             this.continueButton.UseVisualStyleBackColor = false;
             // 
-            // cardNumberField
-            // 
-            this.cardNumberField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cardNumberField.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cardNumberField.Location = new System.Drawing.Point(90, 117);
-            this.cardNumberField.Name = "cardNumberField";
-            this.cardNumberField.Size = new System.Drawing.Size(419, 18);
-            this.cardNumberField.TabIndex = 3;
-            // 
-            // PaymentForm
+            // BalanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.cardNumberField);
+            this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.continueButton);
-            this.DoubleBuffered = true;
+            this.Controls.Add(this.balanceField);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PaymentForm";
+            this.Name = "BalanceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PaymentForm";
+            this.Text = "BalanceForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,7 +78,7 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox balanceField;
         private System.Windows.Forms.Button continueButton;
-        private System.Windows.Forms.TextBox cardNumberField;
     }
 }

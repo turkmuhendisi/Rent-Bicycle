@@ -32,6 +32,7 @@
             this.rentButton = new System.Windows.Forms.Button();
             this.deliverButton = new System.Windows.Forms.Button();
             this.registerButton = new System.Windows.Forms.Button();
+            this.addBalanceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rentButton
@@ -48,6 +49,7 @@
             this.rentButton.Size = new System.Drawing.Size(154, 34);
             this.rentButton.TabIndex = 0;
             this.rentButton.UseVisualStyleBackColor = false;
+            this.rentButton.Click += new System.EventHandler(this.rentButton_Click);
             // 
             // deliverButton
             // 
@@ -78,6 +80,23 @@
             this.registerButton.Size = new System.Drawing.Size(154, 34);
             this.registerButton.TabIndex = 2;
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // addBalanceButton
+            // 
+            this.addBalanceButton.BackColor = System.Drawing.Color.Transparent;
+            this.addBalanceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addBalanceButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBalanceButton.FlatAppearance.BorderSize = 0;
+            this.addBalanceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.addBalanceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.addBalanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBalanceButton.Location = new System.Drawing.Point(710, 408);
+            this.addBalanceButton.Name = "addBalanceButton";
+            this.addBalanceButton.Size = new System.Drawing.Size(154, 34);
+            this.addBalanceButton.TabIndex = 3;
+            this.addBalanceButton.UseVisualStyleBackColor = false;
+            this.addBalanceButton.Click += new System.EventHandler(this.addBalanceButton_Click);
             // 
             // HomeForm
             // 
@@ -86,6 +105,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.addBalanceButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.deliverButton);
             this.Controls.Add(this.rentButton);
@@ -103,6 +123,7 @@
         private System.Windows.Forms.Button rentButton;
         private System.Windows.Forms.Button deliverButton;
         private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button addBalanceButton;
     }
 }
 

@@ -17,7 +17,6 @@ C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\D
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Admin.ModeratorManagement.ModeratorManagementControl.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.DeliveryForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.HomeForm.resources
-C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.PaymentForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.Properties.Resources.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.RegisterForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.RentBicycleForm.resources
@@ -31,3 +30,6 @@ C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\D
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Staffs.UserControls.BicycleMaintenance.BicycleMaintenanceControl.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Staffs.UserControls.BicycleMaintenance.StaffForm.resources
 C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Admin.AdminForm.resources
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.BalanceForm.resources
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.View.Payment.RentalPayment.RentalPaymentForm.resources
+C:\Users\turkmuhendisi\Source\Repos\turkmuhendisi\Rent-Bicycle\Fubis\Fubis\obj\Debug\Fubis.BalancePaymentForm.resources
