@@ -13,6 +13,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Connection string
+C:\Users\turkmuhendisi\source\repos\FubisApp\FubisApp\DataAccessLayer\Repository\Connection.cs
+
 # Mono auto generated files
 mono_crash.*
 
